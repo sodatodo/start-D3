@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>binding array</title>
+  <script src="../node_modules/d3/dist/d3.js"></script>
+</head>
+<body>
+  <svg id="chart" width="600" height="200">
+
+  </svg>
+  <script>
+    /**
+    * 使用d3 延时更新
+    */
+    const array = [100, 200, 300, 350, 375, 400, 500];
+    
+    d3.select('#chart')
+      .selectAll('circle')
+      .data(array)
+      .enter()
+      .append('circle')
+      .attr('r', 10)
+      .attr('cy', 100)
+      .attr('cx', d => d)
+    
+    setTimeout(function() {
+      d3.select('#chart')
+        .selectAll('circle')
+        .data([50, 75, 125, 225, 325, 425, 450])
+        .attr('r', 5)
+        .attr('cx', d => d)
+        .style('fill', 'red')
+    }, 2000)
+  </script>
+</body>
+</html>

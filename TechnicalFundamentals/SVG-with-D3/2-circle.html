@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>svg with d3</title>
+  <script src="../../node_modules/d3/dist/d3.js"></script>
+</head>
+
+<body>
+  <style>
+    svg {
+      border: solid 1px lightgray;
+    }
+  </style>
+  <script>
+    const svg = d3.select('body')
+      .append('svg')
+      .attr('width', 400)
+      .attr('height', 300);
+
+    svg.append('circle').attr('r', 25);
+    svg.append('circle').attr('cx', 250).attr('cy', 200).attr('r', 50);
+    svg.append('circle').attr('cx', 50).attr('cy', 50).attr('r', 20);
+    svg.append('circle').attr('cx', 400).attr('cy', 300).attr('r', 50);
+  </script>
+
+</body>
+
+</html>

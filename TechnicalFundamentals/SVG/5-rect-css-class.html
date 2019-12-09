@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rect css class</title>
+
+  <style>
+    .reds {
+      fill: red;
+    }
+    .semitr {
+      fill-opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <svg width="600" height="200">
+    <rect x="50" y="50" width='90' height="90" class="semitr" />
+    <!-- 矩形的圆角通过 rx ry来进行设置 -->
+    <rect x="200" y="50" width="175" height="100" rx="40" ry="40" class="reds semitr" />
+    <rect x="450" y="25" width="100" height="150" class="reds" />
+  </svg>
+</body>
+</html>
