@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>translate</title>
+</head>
+<style>
+    svg {
+        border: 1px solid lightgray;
+    }
+</style>
+<body>
+    <svg width="600" height="300">
+        <defs>
+            <g id="coords">
+                    <line x1="10" y1="10" x2="200" y2="10" />
+                    <line x1="10" y1="10" x2="10" y2="150" />
+                    <text x="200" y="30">x</text>
+                    <text x="20" y="150">y</text>
+            </g>
+        </defs>
+
+        <use xlink:href="#coords" stroke="black" />
+        <use xlink:href="#coords" stroke="red" 
+            transform="translate(200, 20) rotate(30) scale(1.5)" />
+    </svg>
+</body>
+</html>

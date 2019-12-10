@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select</title>
+    <script src="../../node_modules//d3/dist/d3.js"></script>
+</head>
+
+<body>
+    <p>See results in console log.</p>
+    <div id="section">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+    </div>
+    <p>Paragraph 3</p>
+
+    <script>
+        const section = document.getElementById('section')
+        const div = d3.select(section);
+        const domDiv = div.node();
+        const firstP = d3.select('p');
+        const allParagraphs = d3.selectAll('p');
+        const allPDom = allParagraphs.nodes();
+
+        const sectionParagraphs = d3.select('div').selectAll('p');
+
+        console.log('domDiv :', domDiv);
+        console.log('firstP.node() :', firstP.node());
+        console.log('allPDom.length :', allPDom.length);
+        console.log('sectionParagraphs.nodes().length :', sectionParagraphs.nodes().length);
+    </script>
+</body>
+
+</html>

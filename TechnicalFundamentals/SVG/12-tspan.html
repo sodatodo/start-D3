@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    svg {
+        border: 1px solid lightgray;
+    }
+    text {
+        font-size: 12pt;
+    }
+</style>
+
+<body>
+    <svg width="600" height="200">
+        <g transform="translate(50, 50)">
+            <text x="5" y="15">
+                <tspan dx="0" dy="0">One</tspan>
+                <tspan dy="15">Two</tspan>
+                <tspan dy="15">Three</tspan>
+                <tspan dy="15">Four</tspan>
+                <tspan dy="15">Five</tspan>
+
+                <tspan x="5" dy="0">One</tspan>
+                <tspan dy="-15">Two</tspan>
+                <tspan dy="-15">Three</tspan>
+                <tspan dy="-15">Four</tspan>
+                <tspan dy="-15">Five</tspan>
+            </text>
+            <!-- Each character -->
+        <text x="5" y="15" transform="translate(300,0)">
+                <tspan fill="red"  dy="0 0 0 0 15 0 0 0 7 3 3 3 3 0 7 0 0 0 0 15 0 0 0">One Two +++++ Four Five</tspan>
+                <tspan fill="blue" x="5"  dy="0 0 0 0 -15 0 0 0 -7 -3 -3 -3 -3 0 -7 0 0 0 0 -15 0 0 0">One Two +++++ Four Five</tspan>
+            </text>
+        </g>
+    </svg>
+</body>
+
+</html>
